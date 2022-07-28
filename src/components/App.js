@@ -1,16 +1,16 @@
 import React, {Component, useState} from "react";
 import '../styles/App.css';
-
-class App extends Component {
-    render() {
-
+const relativeList = ["relativeListItem1","relativeListItem2", "relativeListItem3", "relativeListItem4", "relativeListItem2"];
+const App = ()=>{
+        const listItems = relativeList.map((item) =>
+        <li key={item.toString()}>{item}</li>
+      );
         return(
             <div id="main">
-               {/* Do not remove the main div */}
+               <ol key={"relativeList"}>
+                   {listItems}
+               </ol>
             </div>
         )
-    }
 }
-
-
 export default App;
